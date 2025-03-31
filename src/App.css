@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+body{
+    overflow-x: hidden;
+}  
+
+::selection {
+    background-color: #fff95b; /* Yellow background */
+    color: #000; /* Black text */
+}
+  
+
+/* Header.jsx section */
+
+.nav-button{
+    background: linear-gradient(45deg, #145d5c, #39A3A2);
+}
+
+.nav-blur{
+    backdrop-filter: blur(10px);
+}
+
+@font-face {
+    font-family: "NevanoFont";
+    src: url("/src/assets/fonts/NevanoDemo-e9YY3.otf") format("opentype"),
+         url("/src/assets/fonts/NevanoDemoItalic-aY115.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.nevano-font{
+    font-family: "NevanoFont";
+}
+
+@font-face {
+    font-family: "RanadeFont";
+    src: url("/src/assets/fonts/Ranade-Light.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ranade-font{
+    font-family: "RanadeFont";
+}
+
+@font-face {
+    font-family: "RanadeboldFont";
+    src: url("/src/assets/fonts/Ranade-Bold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ranadebold-font{
+    font-family: "RanadeboldFont";
+}
+
+@font-face {
+    font-family: "ChillaxFont";
+    src: url("/src/assets/fonts/Chillax-Semibold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.chillax-font{
+    font-family: "ChillaxFont";
+}
+
+/* Feature.jsx */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr; /* Three equal sections */
+    /* align-items: center; */
+    justify-items: center;
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column for smaller devices */
+    }
+}
+
+/* Security.jsx */
+
+@layer utilities{
+    .card-heading{
+        @apply text-[clamp(1.2rem,2vw,1.8rem)] font-semibold leading-11
+    }
+    .cards{
+        @apply bg-white p-[clamp(1.5rem,4vw,2.5rem)] border-2 rounded-4xl flex-none w-[clamp(20rem,30vw,23.75rem)] h-[clamp(15rem,80vh,38.75rem)] relative overflow-hidden
+    }
+    .cards-para{
+        @apply my-4 text-[clamp(0.9rem,2vw,1.25rem)] font-semibold text-gray-500 shrink-0  leading-9 tracking-wide
+    }
+}
+
+.steps {
+    will-change: transform;
+    /* min-width: max-content; */
+}
+
+.cards:nth-child(1) {
+    will-change: transform;
+    /* background-color: #ffcccc; Light red */
+    box-shadow: -12px 12px 0px 5px rgba(250, 149, 131, 0.7); /* Glow effect */
+}
+
+.cards:nth-child(2) {
+    will-change: transform;
+    /* background-color: #ccffcc; Light green */
+    box-shadow: -12px 12px 0px 5px rgba(150, 245, 178, 0.7); /* Glow effect */
+    /* border: black; */
+}
+
+.cards:nth-child(3) {
+    will-change: transform;
+    /* background-color: #ccccff; Light blue */
+    box-shadow: -12px 12px 0px 5px rgb(255, 219, 43, 0.7); /* Glow effect */
+}
+
+.cards:nth-child(4) {
+    will-change: transform;
+    /* background-color: #ffffcc; Light yellow */
+    box-shadow: -12px 12px 0px 5px rgb(79, 238, 117, 0.7); /* Glow effect */
+}
+
+.cards:nth-child(5) {
+    will-change: transform;
+    /* background-color: #ffffcc; Light yellow */
+    box-shadow: -12px 12px 0px 5px rgb(247, 232, 187, 0.7); /* Glow effect */
+}
+
+.sec {
+    min-height: calc(100vh + 55vh); 
+}
+
+
+.headericon .crypto .dlbtn{
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.scene-container {
+    will-change: transform, opacity;
+    contain: strict;
+    backface-visibility: hidden;
+}
+
+video {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+#scrollid {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+html, body {
+    will-change: scroll-position;
+}
+
+/* FAQ.jsx */
+
+.icon-transition {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+.rotate-180 {
+    transform: rotate(180deg);
+}
+  
