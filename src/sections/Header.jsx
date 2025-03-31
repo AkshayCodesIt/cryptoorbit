@@ -30,33 +30,40 @@ const Header = () => {
   }, []);
 
   useGSAP(() => {
+    let lastScrollY = window.scrollY;
     let isAnimating = false;
 
-    const handleScroll = (ele) => {
-      if (window.scrollY < 100) return;
-
-      if (isAnimating) return; 
+    const handleScroll = () => {
+      if (isAnimating) return;
       isAnimating = true;
 
       requestAnimationFrame(() => {
-        if (ele.deltaY > 0 ) {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
           gsap.to(".nav", {
             y: -100,
             duration: 0.4,
             ease: "none",
           });
-        } else if (ele.deltaY < 0) {
+        } else {
           gsap.to(".nav", {
             y: 0,
             duration: 0.4,
             ease: "none",
           });
         }
+
+        lastScrollY = currentScrollY;
         isAnimating = false;
       });
     };
 
-    window.addEventListener("wheel", handleScroll);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   });
 
   useGSAP(() => {
@@ -82,7 +89,7 @@ const Header = () => {
     <header className='fixed nav top-0 left-0 z-50 w-full px-5 max-lg:px-3 max-md:px-1.5 py-3 m-auto'>
       <div className='nav-blur flex justify-between items-center border border-gray-300 shadow-md rounded-full px-1 md:py-1'>
         <div className='flex flex-row shrink-0 drop-shadow h-13'>
-          <img src={import.meta.env.BASE_URL + "/images/Header/logoco-b.svg"} alt="artfolio" className='object-cover shrink-0 h-full p-2 select-none' />
+          <img src={import.meta.env.BASE_URL + "/images/Header/cryptoorbit-logo.png"} alt="Cryptoorbit" className='object-cover shrink-0 h-full p-2 select-none' />
         </div>
 
         {/* Desktop menu */}

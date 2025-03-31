@@ -12,7 +12,7 @@ const Community = () => {
             ease: "none",
             force3D: true,
         })
-    },[])
+    }, [])
 
 
     return (
@@ -28,9 +28,9 @@ const Community = () => {
                         <p className='text-sm tracking-wide'>Active users</p>
 
                         <button className='font-bold bg-violet-400/50 hover:bg-violet-500/50 border rounded-full py-1.5 px-4 uppercase tracking-wide right-8 top-8 cursor-pointer mt-6 text-sm'>
-                            <a href="https://discord.com/" className='flex items-center'>Join the community <img src={import.meta.env.BASE_URL + "/images/Community/arrowup.svg"} alt="" className='ml-2 w-5'/></a></button>
+                            <a href="https://discord.com/" className='flex items-center'>Join the community <img src={import.meta.env.BASE_URL + "/images/Community/arrowup.svg"} alt="" className='ml-2 w-5' /></a></button>
 
-                        <div className='absolute -right-4.5 scale-100 -bottom-4.5'>
+                        <div className='absolute -right-4.5 scale-100 -bottom-4.5 max-lg:-right-6 max-lg:w-28 max-md:-right-8 max-md:w-25'>
                             <img src={import.meta.env.BASE_URL + "/images/Community/discord.svg"} alt="" className='-rotate-45 select-none' />
                         </div>
 
@@ -99,9 +99,9 @@ const Community = () => {
                             <h1 className='font-bold ranadebold-font text-2xl tracking-wide'>Connect to LEDGER</h1>
                             <p className='text-sm font-semibold mt-3.5 tracking-wide pr-6.5'>Enhance security with hardware protection. Link your Crypto Orbit wallet with Ledger for the best safety and seamless transactions.</p>
 
-                            <div className='absolute -right-118.5 -bottom-160.5 max-md:-right-105 max-md:-bottom-145'>
-                                <img src={import.meta.env.BASE_URL + "/images/Community/ledger1.png"} alt="" className='-rotate-45 scale-8 select-none' />
-                            </div>
+
+                            <img src={import.meta.env.BASE_URL + "/images/Community/ledger.png"} alt="" className='absolute bottom-0 -right-8 w-20 -rotate-50 select-none' />
+
                         </div>
                     </div>
                 </div>

@@ -179,8 +179,8 @@ const Features = () => {
     }, []);
 
     return (
-        <section id='feature' className='flex h-[100vh] bg-[#F5FAFF] relative items-center justify-center max-md:h-full'>
-            <div className="grid-container relative max-lg:mt-40 max-md:mt-0 overflow-hidden gap-15 max-lg:gap-8 max-w-[1300px] mx-auto h-175">
+        <section id='feature' className='flex h-[100vh] bg-[#F5FAFF] relative items-center justify-center max-md:h-full max-sm:min-h-full'>
+            <div className="grid-container relative max-lg:mt-40 max-md:mt-0 overflow-hidden gap-15 max-lg:gap-8 max-w-[1300px] mx-auto h-175 max-sm:min-h-full">
                 <div className="space-y-6">
                     <div id='box1' className="left-box relative bg-linear-to-r from-[#f9cdc3] to-[#facefb] p-[clamp(0.5rem,4vw,1.5rem)] rounded-xl overflow-hidden">
                         <h2 className="ranade-font heading1 text-[clamp(1.5rem,3vw,2.5rem)] max-sm:mr-7 font-semibold mb-20">
